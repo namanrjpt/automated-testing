@@ -43,13 +43,13 @@ public class loginTest extends commonTest
 	{
 		log4j.Log.info("Starting Login test");
 		loginPage.Goto();
-		log4j.Log.info("On login page");
 		loginCommand logInObj = new loginCommand(emailId).withPassword(password);
 		try {
 			driver.waitDriverForElement(loginPageElements.emailId());
 		}catch(IOException ex) {
 			System.out.print(ex);
 		}
+		log4j.Log.info("On login page");
 		logInObj.login();
 		Assert.assertEquals(loggedInCheck.hasLogeedIn(), true, "Login failed");
 		log4j.Log.info("Login test over");

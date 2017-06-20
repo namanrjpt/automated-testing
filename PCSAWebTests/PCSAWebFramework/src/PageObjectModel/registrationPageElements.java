@@ -89,6 +89,7 @@ public class registrationPageElements
 	/*
 	 * @return country option in dropdown
 	 */
+
 	public static WebElement countryOptionInDropdown(String countryName)
 	{
 		By countryOptionInDropdown = By.xpath(".//div[contains(@class, 'menu transition visible')]/div[text()=\"" + countryName +"\"]");
@@ -99,9 +100,57 @@ public class registrationPageElements
 	/*
 	 * @return Account created successfully sweet alert
 	 */
-	public static WebElement successfulRegistrationAlert()
-	{
+	public static WebElement successfulRegistrationAlert() {
 		element = driver.Instance.findElement(constants.successfulRegistrationAlert);
+		return element;
+	}
+
+	/*
+	* After this, prompts are written
+	* */
+
+	/*
+	 * @return red prompt for blank emailId field in the registration page
+	 */
+	public static WebElement signUpEmailIdRedPrompt()
+	{
+		element = driver.Instance.findElement(constants.signUpEmailIdRedPrompt);
+		return element;
+	}
+
+	/*
+	 * @return red prompt for blank name field in the registration page
+	 */
+	public static WebElement signUpNameRedPrompt()
+	{
+		element = driver.Instance.findElement(constants.signUpNameRedPrompt);
+		return element;
+	}
+
+	/*
+	 * @return red prompt for blank password field in the registration page
+	 */
+	public static WebElement signUpPasswordRedPrompt()
+	{
+		element = driver.Instance.findElement(constants.signUpPasswordRedPrompt);
+		return element;
+	}
+
+	/*
+	 * @return red prompt for blank/ mismatched confirm password field in the registration page
+	 */
+	public static WebElement signUpConfirmPasswordRedPrompt()
+	{
+		element = driver.Instance.findElement(constants.signUpConfirmPasswordRedPrompt);
+		return element;
+	}
+
+	/*
+	 * @return red prompt for blank/ mismatched confirm password field in the registration page
+	 */
+	public static WebElement signUpCountryRedPrompt()
+	{
+		element = driver.Instance.findElement(constants.signUpCountryRedPrompt);
 		return element;
 	}
 }

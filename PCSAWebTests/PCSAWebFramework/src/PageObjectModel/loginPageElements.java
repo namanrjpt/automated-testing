@@ -40,4 +40,41 @@ public class loginPageElements
 		element = driver.Instance.findElement(constants.signInButton);
 		return element;
 	}
+
+	/*
+	 * @return red prompt for blank emailId field
+	 */
+	public static WebElement loginEmailIdRedPrompt()
+	{
+		element = driver.Instance.findElement(constants.loginEmailIdRedPrompt);
+		return element;
+	}
+
+	/*
+	 * @return red prompt for blank password field
+	 */
+	public static WebElement loginPasswordRedPrompt()
+	{
+		element = driver.Instance.findElement(constants.loginPasswordRedPrompt);
+		return element;
+	}
+
+	/*
+	 * @return sweet alert for invalid email
+	 */
+	public static WebElement alertInvalidEmail()
+	{
+		element = driver.Instance.findElement(constants.alertInvalidEmail);
+		return element;
+	}
+
+	/*
+	 * @return sweet alert for wrong credentials
+	 */
+	public static WebElement alertWrongCredentials()
+	{
+		element = driver.Instance.findElement(constants.alertWrongCredentials);
+		return element;
+	}
+
 }

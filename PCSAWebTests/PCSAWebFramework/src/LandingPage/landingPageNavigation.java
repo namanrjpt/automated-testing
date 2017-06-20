@@ -4,10 +4,13 @@
  * This triggers the landing page URL.
  */
 package LandingPage;
+import PageObjectModel.loginPageElements;
 import org.openqa.selenium.WebElement;
 
 import PageObjectModel.constants;
 import WebDriver.driver;
+
+import java.io.IOException;
 
 
 public class landingPageNavigation 
@@ -17,6 +20,11 @@ public class landingPageNavigation
 	{
 		// TODO Auto-generated method stub
 		driver.Instance.get(constants.baseURL);
+		try {
+			driver.waitDriverForElement(loginPageElements.emailId());
+		}catch(IOException ex) {
+			System.out.print(ex);
+		}
 	}
 
 	public static boolean isAtLanding() 

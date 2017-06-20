@@ -60,15 +60,7 @@ public class registration
 		else 
 			return false;
 	}
-	
-	public static String checkForAlert()
-	{
-		Alert simpleAlert = driver.Instance.switchTo().alert();
-		String alertText = simpleAlert.getText();
-		simpleAlert.accept();
-		return alertText;
-	}
-    
+
 	/*
 	 * @param Username for registration is the first parameter
 	 * @param Password for registration is the second parameter
