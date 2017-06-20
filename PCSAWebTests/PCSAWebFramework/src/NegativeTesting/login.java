@@ -43,11 +43,19 @@ public class login {
 
     }
 
+<<<<<<< 086ac82bd8c062d26852bedc606408144f7b607a
     public static void tryInvalidEmailFormat(String invalidEmail){
         log4j.Log.info("Negative login test: testing invalid email format");
         log4j.Log.info("Clearing emailID and password fields for negative testing!");
         loginPageElements.emailId().clear();
         loginPageElements.emailId().sendKeys(invalidEmail);
+=======
+    public static void tryInvalidEmailFormat(){
+        log4j.Log.info("Negative login test: testing invalid email format");
+        log4j.Log.info("Clearing emailID and password fields for negative testing!");
+        loginPageElements.emailId().clear();
+        loginPageElements.emailId().sendKeys(constants.invalidEmailFormat);
+>>>>>>> Added negative testing
         loginPageElements.password().clear();
         loginPageElements.password().sendKeys(constants.passwordForNegativeTesting);
         loginPageElements.signInButton().click();

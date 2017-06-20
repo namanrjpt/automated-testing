@@ -2,8 +2,11 @@ package NegativeTests;
 
 import BaseTests.commonTest;
 import LandingPage.landingPageNavigation;
+<<<<<<< 086ac82bd8c062d26852bedc606408144f7b607a
 import NegativeTesting.invalidEmails;
 import PageObjectModel.constants;
+=======
+>>>>>>> Added negative testing
 import PageObjectModel.loginPageElements;
 import WebDriver.driver;
 import org.testng.Assert;
@@ -35,11 +38,16 @@ public class negativeLoginTests extends commonTest {
     @Test
     public void invalidEmailTest(){
         landingPageNavigation.navigateToURL();
+<<<<<<< 086ac82bd8c062d26852bedc606408144f7b607a
         for(String s: invalidEmails.invalidEmailCases){
             login.tryInvalidEmailFormat(s);
             Assert.assertEquals(login.appearanceOfAlertInvalidEmail(), true, "Invalid Email alert is not showing!");
             driver.Instance.findElement(constants.loginInvalidAlertCloseButton).click();
         }
+=======
+        login.tryInvalidEmailFormat();
+        Assert.assertEquals(login.appearanceOfAlertInvalidEmail(), true, "Invalid Email alert is not showing!");
+>>>>>>> Added negative testing
     }
 
     @Test
