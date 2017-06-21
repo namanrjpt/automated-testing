@@ -16,13 +16,13 @@ public class dbChecks
 	/*
 	 * @param email and password for querying the DB
 	 */
-	public static boolean isLoginDataPresent(String email, String password)
+	public static boolean isLoginDataPresent(String email)
 	{
 		//Table name for login users
-		tableName = "user";
+		tableName = "users";
 		
 		//query for getting username for passed email and password
-		SQLquery = "SELECT username FROM "+tableName+ " WHERE email= '"+email+ "' AND password ='"+password+"'";
+		SQLquery = "SELECT username FROM "+tableName+ " WHERE email= '"+email+ "'";
 		System.out.println("the query is- "+SQLquery);
 		try 
 		{
