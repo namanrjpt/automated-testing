@@ -17,6 +17,6 @@ public class databaseConstants
 	public static String dbPassword = "";
 	
 	//DB connection URL eg="jdbc:msql://ip:post_no/DBname"
-	public static String connectionURL="jdbc:mysql://localhost:3306/pcsa_web";
+	public static String connectionURL="jdbc:mysql://localhost:3306/newaide";
 	
 }
