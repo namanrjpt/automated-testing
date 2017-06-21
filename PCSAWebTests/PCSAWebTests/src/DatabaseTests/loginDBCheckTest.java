@@ -16,17 +16,17 @@ public class loginDBCheckTest extends dbConnection
 	@DataProvider(name = "Authentication")
 	public static Object[][] credentials()
 	{
-		return new Object[][]{{"test@gmail.com","test"},{"dummyEmail","dummy_password"}};
+		return new Object[][]{{"test_user_one@email.com"}};
 	}
 	
 	/*
 	 * Verify if the user is present in the DB.
 	 */
 	@Test(dataProvider="Authentication")
-	public void test(String email, String password)
+	public void test(String email)
 	{
 		log4j.Log.info("Starting loginDBCheckTest");
-		Assert.assertEquals(dbChecks.isLoginDataPresent(email, password), true, "loginDBCheckTest");//actual,expected
+		Assert.assertEquals(dbChecks.isLoginDataPresent(email), true, "loginDBCheckTest");//actual,expected
 		log4j.Log.info("loginDBCheckTest over");
 	}
 }
