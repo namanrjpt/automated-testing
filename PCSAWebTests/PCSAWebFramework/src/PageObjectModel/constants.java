@@ -49,6 +49,7 @@ public class constants
 	public static By alertInvalidEmail = By.xpath(".//div[contains(@class, 'ui modal transition visible active')]/div[./text()=\"Invalid email\"]");
 	public static By alertWrongCredentials = By.xpath(".//div[contains(@class, 'ui modal transition visible active')]/div[./text()=\"Invalid credentials.\n" +
 			"                                    It seems that you have not signed up on this platform.\"]");
+	public static By loginInvalidAlertCloseButton = By.xpath(".//div[contains(@class, \"ui cancel green button\")]");
 	public static String loginTitle = "First Aide";
 	public static String loginSheet="Sheet2";
 
