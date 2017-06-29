@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import Logs.log4j;
 import PageObjectModel.constants;
-import PageObjectModel.logoutPageElements;
+import PageObjectModel.loginPageElements;
 import PageObjectModel.registrationPageElements;
 import WebDriver.driver;
 
@@ -121,7 +121,14 @@ public class registration
 
 		(new WebDriverWait(driver.Instance, 10)).until(ExpectedConditions.visibilityOf(registrationPageElements.successfulRegistrationAlert()));
 		if(registrationPageElements.successfulRegistrationAlert().isDisplayed()){
-			return true;
+			(new WebDriverWait(driver.Instance, 10)).until(ExpectedConditions.stalenessOf(loginPageElements.emailId()));
+			(new WebDriverWait(driver.Instance, 10)).until(ExpectedConditions.visibilityOf(loginPageElements.emailId()));
+			if(loginPageElements.emailId().isDisplayed()){
+				return true;
+			}
+			else{
+				return false;
+			}
 		}
 		else{
 			return false;
