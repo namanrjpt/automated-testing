@@ -14,9 +14,6 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-/**
- * Created by naman on 24/6/17.
- */
 public class wasItSexualAssaultTests {
     @BeforeClass
     public static void startDriver()

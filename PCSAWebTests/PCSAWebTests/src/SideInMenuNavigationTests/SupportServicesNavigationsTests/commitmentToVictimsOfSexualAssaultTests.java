@@ -13,9 +13,6 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-/**
- * Created by naman on 24/6/17.
- */
 public class commitmentToVictimsOfSexualAssaultTests {
     @BeforeClass
     public static void startDriver()
@@ -50,7 +47,7 @@ public class commitmentToVictimsOfSexualAssaultTests {
             log4j.Log.info(e);
         }
 
-        Assert.assertEquals(supportServices.canGoTocommitmentToVictimsOfSexualAssault(), true, "\"Peace Corps Commitment to Victims Of Sexual Assault\" page is not loading!");
+        Assert.assertEquals(supportServices.canGoToCommitmentToVictimsOfSexualAssault(), true, "\"Peace Corps Commitment to Victims Of Sexual Assault\" page is not loading!");
     }
 
     @Test(priority = 1)

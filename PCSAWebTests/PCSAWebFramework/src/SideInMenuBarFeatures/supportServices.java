@@ -6,10 +6,10 @@ import PageObjectModel.sideInMenuBarElements;
 import WebDriver.driver;
 import org.openqa.selenium.WebElement;
 
-/**
- * Created by naman on 23/6/17.
- */
 public class supportServices {
+    /*
+    * @return true if the navigation to 'Benefits of Seeking Staff Support' is successful
+    * */
     public static boolean canGoToBenefitsOfSeekingStaffSupport()
     {
         sideInMenuBarElements.supportServicesTab().click();
@@ -24,7 +24,10 @@ public class supportServices {
             return false;
     }
 
-    public static boolean canGoToavailableServicesAfterASexualAssault()
+    /*
+    * @return true if the navigation to 'Available Services After a Sexual Assault' is successful
+    * */
+    public static boolean canGoToAvailableServicesAfterASexualAssault()
     {
         sideInMenuBarElements.supportServicesTab().click();
 
@@ -38,7 +41,10 @@ public class supportServices {
             return false;
     }
 
-    public static boolean canGoTocommitmentToVictimsOfSexualAssault()
+    /*
+    * @return true if the navigation to 'Commitment to Victims of Sexual Assault' is successful
+    * */
+    public static boolean canGoToCommitmentToVictimsOfSexualAssault()
     {
         sideInMenuBarElements.supportServicesTab().click();
 
@@ -52,6 +58,9 @@ public class supportServices {
             return false;
     }
 
+    /*
+    * @return true if the navigation to 'Confidentiality' is successful
+    * */
     public static boolean canGoConfidentiality()
     {
         sideInMenuBarElements.supportServicesTab().click();
@@ -66,6 +75,9 @@ public class supportServices {
             return false;
     }
 
+    /*
+    * @return true if the navigation to 'Peace Corps Mythbusters' is successful
+    * */
     public static boolean canGoToPeaceCorpsMythbusters()
     {
         sideInMenuBarElements.supportServicesTab().click();

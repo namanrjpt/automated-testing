@@ -13,9 +13,6 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-/**
- * Created by naman on 22/6/17.
- */
 public class radarTests {
     @BeforeClass
     public static void startDriver()

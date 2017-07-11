@@ -299,4 +299,10 @@ public class constants
 	public static By alertHeading = By.xpath("html/body/div[3]/h2");
 	public static By alertText = By.xpath("html/body/div[3]/p");
 	public static By alertButton = By.cssSelector("button.confirm");
+
+	/*
+	*  Left Virtical sidebar menu
+	* */
+	public static By leftSidebarMenu = By.xpath(".//div[contains(@class, \"ui visible left vertical sidebar menu mustard\")]");
+
 }

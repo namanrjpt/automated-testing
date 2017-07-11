@@ -26,7 +26,7 @@ public class loggedInCheck {
 		* Code for Login check will go here.
 		* */
 		(new WebDriverWait(driver.Instance, 10)).until(ExpectedConditions.visibilityOf(logoutPageElements.logoutButton()));
-		if(logoutPageElements.logoutButton().isDisplayed()){
+		if(logoutPageElements.logoutButton().isDisplayed() && driver.Instance.findElement(constants.leftSidebarMenu).isDisplayed()){
 			return true;
 		}
 		else{

@@ -13,9 +13,6 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-/**
- * Created by naman on 23/6/17.
- */
 public class safetyPlanBasicsTests {
     @BeforeClass
     public static void startDriver()

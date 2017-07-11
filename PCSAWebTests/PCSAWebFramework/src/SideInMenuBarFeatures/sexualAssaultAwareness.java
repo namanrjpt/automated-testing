@@ -10,6 +10,9 @@ import org.openqa.selenium.WebElement;
  */
 public class sexualAssaultAwareness
 {
+    /*
+    * @return true if the navigation to 'Was it Sexual Assault' is successful
+    * */
     public static boolean canGoToWasItSexualAssault()
     {
         sideInMenuBarElements.sexualAssaultAwarenesstTab().click();
@@ -22,6 +25,9 @@ public class sexualAssaultAwareness
             return false;
     }
 
+    /*
+    * @return true if the navigation to 'Sexual Assault Common Question' is successful
+    * */
     public static boolean canGoToSexualAssaultCommonQuestions()
     {
         sideInMenuBarElements.sexualAssaultAwarenesstTab().click();
@@ -35,6 +41,9 @@ public class sexualAssaultAwareness
 
     }
 
+    /*
+    * @return true if the navigation to 'Impact of sexual Assault' is successful
+    * */
     public static boolean canGoToImpactOfSexualAssault()
     {
         sideInMenuBarElements.sexualAssaultAwarenesstTab().click();
@@ -48,6 +57,9 @@ public class sexualAssaultAwareness
 
     }
 
+    /*
+    * @return true if the navigation to 'Sexual Harassment' is successful
+    * */
     public static boolean canGoToSexualHarassment()
     {
         sideInMenuBarElements.sexualAssaultAwarenesstTab().click();

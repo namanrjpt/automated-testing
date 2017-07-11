@@ -13,9 +13,6 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-/**
- * Created by naman on 24/6/17.
- */
 public class availableServicesAfterASexualAssaultTests {
     @BeforeClass
     public static void startDriver()
@@ -52,7 +49,7 @@ public class availableServicesAfterASexualAssaultTests {
             log4j.Log.info(e);
         }
 
-        Assert.assertEquals(supportServices.canGoToavailableServicesAfterASexualAssault(), true, "\"Available services after a sexual assault\" is not shown!");
+        Assert.assertEquals(supportServices.canGoToAvailableServicesAfterASexualAssault(), true, "\"Available services after a sexual assault\" is not shown!");
 
     }
 
