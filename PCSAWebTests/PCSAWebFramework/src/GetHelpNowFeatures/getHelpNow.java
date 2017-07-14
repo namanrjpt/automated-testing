@@ -7,6 +7,8 @@ package GetHelpNowFeatures;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import Logs.log4j;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
@@ -56,9 +58,8 @@ public class getHelpNow
 	public static boolean isAtGetHelpNow() 
 	{
 		URL = driver.Instance.getCurrentUrl();
-		System.out.println("url is "+URL);
-		WebElement gethelpPageTitle = getHelpNowPageElements.gethelpPageTitle();
-		if(URL.contains(constants.baseURL+"getHelpNow.php")&& gethelpPageTitle.getText().contains(constants.getHelpTitle))
+		log4j.Log.info("url is "+URL);
+		if(getHelpNowPageElements.gethelpPageTitle().getText().contains("Get Help Now") && driver.Instance.getCurrentUrl().contains("get-help-now"))
 		{
 			return true;
 		}
