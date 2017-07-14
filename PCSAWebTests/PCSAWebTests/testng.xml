@@ -55,20 +55,7 @@
 	<!-- Get Help Now Tests -->
 	<test name="Get Help Now Tests">
 		<classes>
-			<class name="GetHelpNowTests.getHelpNavigationTest" />
-			<class name="GetHelpNowTests.selectCountryTest" />
-			<class name="GetHelpNowTests.pcmoCallTest" />
-			<class name="GetHelpNowTests.pcmoSMSTest" />
-			<class name="GetHelpNowTests.sarlCallTest" />
-			<class name="GetHelpNowTests.sarlSMSTest" />
-			<class name="GetHelpNowTests.ssmCallTest" />
-			<class name="GetHelpNowTests.ssmSMSTest" />
-			<class name="GetHelpNowTests.OfficeofCivilRightsNDiversityContactNowTest" />
-			<class name="GetHelpNowTests.OfficeofInspectorGeneralContactNowTest" />
-			<class name="GetHelpNowTests.OfficeofVictimAdvocacyContactNowTest" />
-			<class name="GetHelpNowTests.officeoOfInspectorGeneralLearnMoreNavigationTest" />
-			<class name="GetHelpNowTests.PCSaveAnonymousHelplineContactNowTest" />
-			<class name="GetHelpNowTests.pcSavesLearnMoreNavigationTest" />
+			<class name="GetHelpNowTests.canGoToGetHelpNow" />
 		</classes>
 	</test>
 
