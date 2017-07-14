@@ -96,7 +96,7 @@ public class constants
 	 * Side In Menu Bar
 	 */
 	public static By firstAideTab= By.xpath(".//*[@id='accordian']/ul/li[1]/h2/a");
-	public static By getHelpNowTab = By.xpath(".//*[@id='accordian']/ul/li[1]/h3[1]/a");
+	public static By getHelpNowTab = By.xpath(".//a[contains(text(), \"Get Help Now\")]");
 	public static By circleOfTrustTab = By.xpath(".//*[@id='accordian']/ul/li[1]/h3[2]/a");
 	public static By safetyToolsTab = By.xpath(".//div[text()=\"Safety Tools\"]");
 	public static By supportServicesTab = By.xpath(".//div[text()=\"Support Services\"]");
@@ -235,25 +235,25 @@ public class constants
 	/*
 	 * Get Help Now
 	 */
-	public static By gethelpPageTitle = By.xpath("html/body/center/div/div[1]/h1");
+	public static By gethelpPageTitle = By.xpath(".//div[contains(@class, \"ui dividing header\") and text()=\"Get Help Now\"]");
 	public static String getHelpTitle = "Get Help Now";
-	public static By contactPCMO = By.xpath(".//*[@id='bt-PCMO']");
-	public static By contactSSM = By.xpath(".//*[@id='bt-SSM']");
-	public static By contactSARL = By.xpath(".//*[@id='bt-SARL']");
+	public static By contactPCMO = By.xpath(".//button[text()='Contact PCMO']");
+	public static By contactSSM = By.xpath(".//button[text()='Contact SSM']");
+	public static By contactSARL = By.xpath(".//button[text()='Contact SARL']");
 	public static By toGetHelpPage2 = By.xpath(".//*[@id='tr-2']/td[2]/a");
-	public static By pcSavesAnonymousHelpline = By.xpath(".//*[@id='bt-PCSaves']");
-	public static By officeOfVictimAdvocacy = By.xpath(".//*[@id='bt-offVA']");
-	public static By officeOfInspectorGeneral = By.xpath(".//*[@id='bt-offIG']");
-	public static By officeOfCivilRightsAndDiversity = By.xpath(".//*[@id='bt-offCRD']");
+	public static By pcSavesAnonymousHelpline = By.xpath(".//button[text()='PC Saves Anonymous Helpline']");
+	public static By officeOfVictimAdvocacy = By.xpath(".//button[text()='Office of Victim Advocacy']");
+	public static By officeOfInspectorGeneral = By.xpath(".//button[text()='Office of Inspector General']");
+	public static By officeOfCivilRightsAndDiversity = By.xpath(".//button[text()='Office of Civil Rights and Diversity']");
 	public static By toGetHelpPage1fromPage2 = By.xpath(".//*[@id='bw-arrow']/a");
 	public static By changeLocationDropdown = By.xpath(".//*[@id='location']");
 	public static By chooseLocationText = By.xpath(".//*[@id='loc']");
-	public static By pcmoCallButton = By.xpath(".//*[@id='PCMO-call']");
-	public static By pcmoSMSButton = By.xpath(".//*[@id='PCMO-msg']");
-	public static By ssmCallButton = By.xpath(".//*[@id='SSM-call']");
-	public static By ssmSMSButton = By.xpath(".//*[@id='SSM-msg']");
-	public static By sarlCallButton = By.xpath(".//*[@id='SARL-call']");
-	public static By sarlSMSButton = By.xpath(".//*[@id='SARL-msg']");
+	public static By pcmoCallButton = By.xpath(".//button[text()='Call Now']");
+	public static By pcmoSMSButton = By.xpath(".//button[text()='Send Message']");
+	public static By ssmCallButton = By.xpath(".//button[text()='Call Now']");
+	public static By ssmSMSButton = By.xpath(".//button[text()='Send Message']");
+	public static By sarlCallButton = By.xpath(".//button[text()='Call Now']");
+	public static By sarlSMSButton = By.xpath(".//button[text()='Send Message']");
 	public static By makeCallButton = By.xpath(".//*[@id='submit']");
 	public static By smsBodyTextBox = By.xpath(".//*[@id='SMS-body']");
 	public static By sendSMSButton = By.xpath(".//*[@id='bt-SMS']");
@@ -261,8 +261,8 @@ public class constants
 	public static By contactNowButtonOfficeOfVictimAdvocacy = By.xpath(".//*[@id='bt-cntnw']");
 	public static By contactNowButtonOfficeOfInspectorGeneral = By.xpath(".//*[@id='bt-cntnw']");
 	public static By contactNowButtonoOfficeOfCivilRightsAndDiversity = By.xpath(".//*[@id='bt-cntnw']");
-	public static By sendMessageButton = By.xpath(".//*[@id='msg']");
-	public static By voiceCallButton = By.xpath(".//*[@id='call']");
+	public static By sendMessageButton = By.xpath(".//button[text()='Send Message']");
+	public static By voiceCallButton = By.xpath(".//button[text()='Call Now']");
 	public static By pcSavesLearnMoreLink = By.xpath("html/body/center/div/div[3]/a");
 	public static By officeOfVictimAdvocacyEmailLink = By.xpath("html/body/center/div/div[3]/a");
 	public static By officeOfInspectorGeneralLearnMoreLink = By.xpath("html/body/center/div/div[3]/a");
