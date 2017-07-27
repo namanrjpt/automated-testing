@@ -274,7 +274,7 @@ public class constants
 	public static By circleOfTrustTitle = By.xpath(".//div[contains(@class, \"ui dividing header\") and text()=\"Circle of Trust\"]");
 	public static By circleOfTrustEditButton = By.xpath(".//i[contains(@class, \"edit icon\")]");
 	public static By circleOfTrustHelpMeButton = By.xpath(".//img[contains(@class, \"get-help-button\")]");
-	
+
 	//Button for the message "Come Get me"
 	public static By msg1_Button = By.xpath(".//button[contains(text(), \"Come Get Me\")]");
 	
