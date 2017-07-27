@@ -97,7 +97,7 @@ public class constants
 	 */
 	public static By firstAideTab= By.xpath(".//*[@id='accordian']/ul/li[1]/h2/a");
 	public static By getHelpNowTab = By.xpath(".//a[contains(text(), \"Get Help Now\")]");
-	public static By circleOfTrustTab = By.xpath(".//*[@id='accordian']/ul/li[1]/h3[2]/a");
+	public static By circleOfTrustTab = By.xpath(".//a[contains(text(), \"Circle of Trust\")]");
 	public static By safetyToolsTab = By.xpath(".//div[text()=\"Safety Tools\"]");
 	public static By supportServicesTab = By.xpath(".//div[text()=\"Support Services\"]");
 	public static By sexualAssaultAwarenesstTab = By.xpath(".//div[text()=\"Sexual Assault Awareness\"]");
@@ -271,7 +271,7 @@ public class constants
 	/*
 	 * Circle of Trust
 	 */
-	public static By circleOfTrustTitle = By.xpath("html/body/center/div/div[1]/h1");
+	public static By circleOfTrustTitle = By.xpath(".//div[contains(@class, \"ui dividing header\") and text()=\"Circle of Trust\"]");
 	public static By circleOfTrustEditButton = By.xpath(".//*[@id='ic-edit']");
 	public static By circleOfTrusHelpMeButton = By.xpath(".//*[@id='help_me']");
 
