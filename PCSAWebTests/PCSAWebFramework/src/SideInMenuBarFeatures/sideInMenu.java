@@ -74,7 +74,7 @@ public class sideInMenu
 		WebElement circleOfTrustTab = sideInMenuBarElements.circleOfTrustTab();
 		circleOfTrustTab.click();
 		WebElement circleOfTrustTitle = driver.Instance.findElement(constants.circleOfTrustTitle);
-		if(circleOfTrustTitle.getText().contains("Circle of Trust") && driver.Instance.getCurrentUrl().contains(constants.baseURL+"circleOfTrust.php"))
+		if(circleOfTrustTitle.getText().contains("Circle of Trust") && driver.Instance.getCurrentUrl().contains("circle-of-trust"))
 		{
 			return true;
 		}
