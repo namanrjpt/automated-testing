@@ -246,25 +246,26 @@ public class constants
 	 * Circle of Trust
 	 */
 	public static By circleOfTrustTitle = By.xpath(".//div[contains(@class, \"ui dividing header\") and text()=\"Circle of Trust\"]");
-	public static By circleOfTrustEditButton = By.xpath(".//*[@id='ic-edit']");
-	public static By circleOfTrusHelpMeButton = By.xpath(".//*[@id='help_me']");
+	public static By circleOfTrustEditButton = By.xpath(".//i[contains(@class, \"edit icon\")]");
+	public static By circleOfTrustHelpMeButton = By.xpath(".//img[contains(@class, \"get-help-button\")]");
 	
 	//Button for the message "Come Get me"
-	public static By msg1_Button = By.xpath(".//*[@id='msg']");
+	public static By msg1_Button = By.xpath(".//button[contains(text(), \"Come Get Me\")]");
 	
 	//Button for the message "Call I need an interruption"
-	public static By msg2_Button = By.xpath(".//*[@id='msg2']");
+	public static By msg2_Button = By.xpath(".//button[contains(text(), \"Call I need an interruption\")]");
 	
 	//Button for the message "I need to talk"
-	public static By msg3_Button = By.xpath(".//*[@id='msg3']");
+	public static By msg3_Button = By.xpath(".//button[contains(text(), \"I need to talk\")]");
 	
-	public static By comrade1_TextBox = By.xpath(".//*[@id='comrade1']");
-	public static By comrade2_TextBox = By.xpath(".//*[@id='comrade2']");
-	public static By comrade3_TextBox = By.xpath(".//*[@id='comrade3']");
-	public static By comrade4_TextBox = By.xpath(".//*[@id='comrade4']");
-	public static By comrade5_TextBox = By.xpath(".//*[@id='comrade5']");
-	public static By comrade6_TextBox = By.xpath(".//*[@id='comrade6']");
-	public static By circleOfTrusSaveComradeButton = By.xpath("html/body/form/center/div/input");
+	public static By comrade1_TextBox = By.xpath(".//input[@id=\"comrade_1\"]");
+	public static By comrade2_TextBox = By.xpath(".//input[@id=\"comrade_2\"]");
+	public static By comrade3_TextBox = By.xpath(".//input[@id=\"comrade_3\"]");
+	public static By comrade4_TextBox = By.xpath(".//input[@id=\"comrade_4\"]");
+	public static By comrade5_TextBox = By.xpath(".//input[@id=\"comrade_5\"]");
+	public static By comrade6_TextBox = By.xpath(".//input[@id=\"comrade_6\"]");
+	public static By circleOfTrustSaveComradeButton = By.xpath(".//button[text()=\"Save\"]");
+	public static By backButtonOnEditComradePage = By.xpath("/html/body/div/div/div/div[2]/div/div/div[2]/div[2]/div[1]/i");
 	
 	
 	/*

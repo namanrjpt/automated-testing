@@ -5,6 +5,7 @@
  */
 package CircleOfTrustFeatures;
 
+import Logs.log4j;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import LoginAndRegistration.existingUserLogin;
@@ -12,6 +13,9 @@ import PageObjectModel.circleOfTrustPageElements;
 import PageObjectModel.constants;
 import PageObjectModel.sideInMenuBarElements;
 import WebDriver.driver;
+
+import javax.naming.StringRefAddr;
+import java.io.IOException;
 
 public class circleOfTrust 
 {
@@ -35,7 +39,7 @@ public class circleOfTrust
 		WebElement pageTitle = circleOfTrustPageElements.circleOfTrustTitle();
 		
 		//Validate if at "Circle of Trust"
-		if(pageTitle.getText().contains("") && driver.Instance.getCurrentUrl().contains(constants.baseURL+"circleOfTrust.php"))
+		if(driver.Instance.getCurrentUrl().contains("circle-of-trust"))
 		{
 			return true;
 		}
@@ -71,7 +75,7 @@ public class circleOfTrust
 	{
 		if(isAtCircleOfTrust())
 		{
-			WebElement circleOfTrusHelpMeButton = circleOfTrustPageElements.circleOfTrusHelpMeButton();
+			WebElement circleOfTrusHelpMeButton = circleOfTrustPageElements.circleOfTrustHelpMeButton();
 			circleOfTrusHelpMeButton.click();
 			WebElement msg1_Button = circleOfTrustPageElements.msg1_Button();
 			msg1_Button.click();
@@ -99,7 +103,7 @@ public class circleOfTrust
 	{
 		if(isAtCircleOfTrust())
 		{
-			WebElement circleOfTrusHelpMeButton = circleOfTrustPageElements.circleOfTrusHelpMeButton();
+			WebElement circleOfTrusHelpMeButton = circleOfTrustPageElements.circleOfTrustHelpMeButton();
 			circleOfTrusHelpMeButton.click();
 			WebElement msg2_Button = circleOfTrustPageElements.msg2_Button();
 			msg2_Button.click();
@@ -127,7 +131,7 @@ public class circleOfTrust
 	{
 		if(isAtCircleOfTrust())
 		{
-			WebElement circleOfTrusHelpMeButton = circleOfTrustPageElements.circleOfTrusHelpMeButton();
+			WebElement circleOfTrusHelpMeButton = circleOfTrustPageElements.circleOfTrustHelpMeButton();
 			circleOfTrusHelpMeButton.click();
 			WebElement msg3_Button = circleOfTrustPageElements.msg3_Button();
 			msg3_Button.click();
@@ -146,6 +150,63 @@ public class circleOfTrust
 			}
 		}
 		return false;
+	}
+
+	public static boolean canEditComradesNumbers(String exampleNumber){
+		WebElement circleOfTrustTab = sideInMenuBarElements.circleOfTrustTab();
+		try{
+			driver.waitDriverForElement(circleOfTrustTab);
+		}
+		catch(IOException e){
+			log4j.Log.info(e);
+		}
+		circleOfTrustTab.click();
+
+		try{
+			driver.waitDriverForElement(circleOfTrustPageElements.circleOfTrustEditButton());
+		}
+		catch(IOException e){
+			log4j.Log.info(e);
+		}
+
+		circleOfTrustPageElements.circleOfTrustEditButton().click();
+
+		try{
+			driver.waitDriverForElement(circleOfTrustPageElements.comrade1_TextBox());
+		}
+		catch(IOException e){
+			log4j.Log.info(e);
+		}
+
+		circleOfTrustPageElements.comrade1_TextBox().clear();
+		circleOfTrustPageElements.comrade1_TextBox().sendKeys(exampleNumber);
+		circleOfTrustPageElements.circleOfTrustSaveComradeButton().click();
+
+		circleOfTrustPageElements.backButtonOnEditComradePage().click();
+
+		try{
+			driver.waitDriverForElement(circleOfTrustPageElements.circleOfTrustEditButton());
+		}
+		catch(IOException e){
+			log4j.Log.info(e);
+		}
+
+		circleOfTrustPageElements.circleOfTrustEditButton().click();
+		try{
+			driver.waitDriverForElement(circleOfTrustPageElements.comrade1_TextBox());
+		}
+		catch(IOException e){
+			log4j.Log.info(e);
+		}
+
+		String sd = circleOfTrustPageElements.comrade1_TextBox().getAttribute("value");
+
+		if(sd.equals(exampleNumber)){
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 
 	public static Object canAddComradesNumbers(String[] phNumbers) 
@@ -196,7 +257,7 @@ public class circleOfTrust
 				comrade6_TextBox.sendKeys(phNumbers[5]);
 			}
 			
-			WebElement circleOfTrusSaveComradeButton = circleOfTrustPageElements.circleOfTrusSaveComradeButton();
+			WebElement circleOfTrusSaveComradeButton = circleOfTrustPageElements.circleOfTrustSaveComradeButton();
 			circleOfTrusSaveComradeButton.click();
 			
 			try
