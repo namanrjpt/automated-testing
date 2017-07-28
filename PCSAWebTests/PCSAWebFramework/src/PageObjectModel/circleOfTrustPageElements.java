@@ -34,9 +34,9 @@ public class circleOfTrustPageElements
 	/*
 	 * @return 'Help Me' Button on the Circle of Trust main page.
 	 */
-	public static WebElement circleOfTrusHelpMeButton() 
+	public static WebElement circleOfTrustHelpMeButton()
 	{
-		element = driver.Instance.findElement(constants.circleOfTrusHelpMeButton);
+		element = driver.Instance.findElement(constants.circleOfTrustHelpMeButton);
 		return element;
 	}
 	
@@ -124,9 +124,18 @@ public class circleOfTrustPageElements
 	/*
 	 * @return "Save" Button on the Comrade Edit page.
 	 */
-	public static WebElement circleOfTrusSaveComradeButton() 
+	public static WebElement circleOfTrustSaveComradeButton()
 	{
-		element = driver.Instance.findElement(constants.circleOfTrusSaveComradeButton);
+		element = driver.Instance.findElement(constants.circleOfTrustSaveComradeButton);
+		return element;
+	}
+
+	/*
+	 * @return back Button on the Comrade Edit page.
+	 */
+	public static WebElement backButtonOnEditComradePage()
+	{
+		element = driver.Instance.findElement(constants.backButtonOnEditComradePage);
 		return element;
 	}
 	

@@ -69,7 +69,7 @@ public class sideInMenu
 	/*
 	 * @return true if the user is able to successfully navigate after clicking on "Circle of Trust" on the side in menu 
 	 */
-	public static boolean canNavigateToCircleOfTrust() 
+	public static boolean canNavigateToCircleOfTrust()
 	{
 		WebElement circleOfTrustTab = sideInMenuBarElements.circleOfTrustTab();
 		circleOfTrustTab.click();
