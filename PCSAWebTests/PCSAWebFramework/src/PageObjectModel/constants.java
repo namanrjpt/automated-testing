@@ -293,7 +293,6 @@ public class constants
 	public static By circleOfTrustSaveComradeButton = By.xpath(".//button[text()=\"Save\"]");
 	public static By backButtonOnEditComradePage = By.xpath("/html/body/div/div/div/div[2]/div/div/div[2]/div[2]/div[1]/i");
 	
-
 	/*
 	 * Sweet Alert Components
 	 */

@@ -40,7 +40,10 @@ public class comradesList {
         catch(IOException e){
             log4j.Log.info(e);
         }
+<<<<<<< c042a03ba3b8b971ab37eba8b55f1776f672258d
 
+=======
+>>>>>>> Adds Circle of Trust navigations and editing comrads list test
         circleOfTrustTab.click();
 
         try{
