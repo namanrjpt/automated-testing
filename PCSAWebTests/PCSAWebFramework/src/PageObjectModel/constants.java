@@ -31,6 +31,7 @@ public class constants
 	public static String emailForNegativeTesting = "wrong_user@email.com";
 	public static String passwordForNegativeTesting = "randomtext";
 	public static String matchingConfirmPasswordForNegativeTesting = "randomtext";
+	public static String passwordLessThanSixCharacters = "abcd";
 	public static String mismatchingConfirmPasswordForNegativeTesting = "notrandom text";
 	public static String usernameForNegativeTesting = "username";
 	public static String countryForNegativeTesting = "Afghanistan";
@@ -82,6 +83,7 @@ public class constants
 	public static By signUpPasswordRedPrompt = By.xpath(".//form[contains(@class, 'signup-form')]//div[text()=\"Please enter your password\"]");
 	public static By signUpConfirmPasswordRedPrompt = By.xpath(".//form[contains(@class, 'signup-form')]//div[text()=\"Password did not match\"]");
 	public static By signUpCountryRedPrompt = By.xpath(".//form[contains(@class, 'signup-form')]//div[text()=\"Please select your country\"]");
+	public static By passwordMinSixCharsLongPrompt = By.xpath(".//form[contains(@class, 'signup-form')]//div[text()=\"Minimum 6 characters long\"]");
 	public static String registrationSheet = "Sheet3";
 
 	/*

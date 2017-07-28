@@ -80,6 +80,23 @@ public class signUp {
         signUpButton.click();
     }
 
+    public static void passwordLessThanSixCharacters(){
+        log4j.Log.info("Negative Sign-Up test: testing registration with password input of less than six characters");
+        emailId.clear();
+        emailId.sendKeys(constants.emailForNegativeTesting);
+        username.clear();
+        username.sendKeys(constants.usernameForNegativeTesting);
+        password.clear();
+        password.sendKeys(constants.passwordLessThanSixCharacters);
+        confirmPassword.clear();
+        confirmPassword.sendKeys(constants.passwordLessThanSixCharacters);
+        hostCountry.click();
+        (new WebDriverWait(driver.Instance, 10)).until(ExpectedConditions.visibilityOf(registrationPageElements.countryListDropDown()));
+        registrationPageElements.countryOptionInDropdown(constants.countryForNegativeTesting).click();
+        (new WebDriverWait(driver.Instance, 10)).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(".//div[contains(@class, 'menu transition visible')]")));
+        signUpButton.click();
+    }
+
     /*
     * Here blank confirm password field will also be considered as mismatched passwords
     * ans should show "Password did not match prompt"
@@ -149,7 +166,17 @@ public class signUp {
     }
 
     public static boolean appearanceOfConfirmPasswordPrompt(){
-        if(registrationPageElements.signUpConfirmPasswordRedPrompt().isDisplayed()){
+        if(registrationPageElements.passwordMinSixCharsLongPrompt().isDisplayed()){
+            log4j.Log.info("Minimum six chars long password prompt is shown!");
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public static boolean appearanceOfMinSixCharsLongPrompt(){
+        if(registrationPageElements.passwordMinSixCharsLongPrompt().isDisplayed()){
             log4j.Log.info("read mismatched password prompt is shown!");
             return true;
         }

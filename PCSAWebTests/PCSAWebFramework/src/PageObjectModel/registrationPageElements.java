@@ -146,6 +146,15 @@ public class registrationPageElements
 	}
 
 	/*
+	 * @return red prompt for minimum six chars long password in the registration page
+	 */
+	public static WebElement passwordMinSixCharsLongPrompt()
+	{
+		element = driver.Instance.findElement(constants.passwordMinSixCharsLongPrompt);
+		return element;
+	}
+
+	/*
 	 * @return red prompt for blank/ mismatched confirm password field in the registration page
 	 */
 	public static WebElement signUpCountryRedPrompt()

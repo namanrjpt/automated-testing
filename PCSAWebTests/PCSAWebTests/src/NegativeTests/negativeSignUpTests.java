@@ -47,6 +47,13 @@ public class negativeSignUpTests extends commonTest {
     }
 
     @Test
+    public void passwordLessThanSixCharacters(){
+        registration.Goto();
+        signUp.passwordLessThanSixCharacters();
+        Assert.assertEquals(signUp.appearanceOfMinSixCharsLongPrompt(), true, "Prompt is not showing");
+    }
+
+    @Test
     public void BlankCountry(){
         registration.Goto();
         signUp.blankCountry();
