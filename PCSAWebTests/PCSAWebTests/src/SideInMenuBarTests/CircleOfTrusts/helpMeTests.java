@@ -1,6 +1,6 @@
 package SideInMenuBarTests.CircleOfTrusts;
 
-import CircleOfTrustFeatures.circleOfTrust;
+
 import LoginAndRegistration.existingUserLogin;
 import Logs.log4j;
 import PageObjectModel.circleOfTrustPageElements;
@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class comradesList {
+public class helpMeTests {
 
     @BeforeClass
     public static void startDriver()
@@ -31,9 +31,10 @@ public class comradesList {
     }
 
     @Test(priority = 0)
-    public void canGoToComradesListPage(){
-        log4j.Log.info("Starting comrades list page navigation Test");
+    public void canGoToHelpMePage(){
+        log4j.Log.info("Starting help me page navigation Test");
         WebElement circleOfTrustTab = sideInMenuBarElements.circleOfTrustTab();
+
         try{
             driver.waitDriverForElement(circleOfTrustTab);
         }
@@ -44,30 +45,22 @@ public class comradesList {
         circleOfTrustTab.click();
 
         try{
-            driver.waitDriverForElement(circleOfTrustPageElements.circleOfTrustEditButton());
+            driver.waitDriverForElement(circleOfTrustPageElements.circleOfTrustHelpMeButton());
         }
         catch(IOException e){
             log4j.Log.info(e);
         }
-        circleOfTrustPageElements.circleOfTrustEditButton().click();
+        circleOfTrustPageElements.circleOfTrustHelpMeButton().click();
 
         try{
-            driver.waitDriverForElement(circleOfTrustPageElements.comrade1_TextBox());
+            driver.waitDriverForElement(circleOfTrustPageElements.msg1_Button());
         }
         catch(IOException e){
             log4j.Log.info(e);
         }
-        Assert.assertEquals(circleOfTrustPageElements.comrade1_TextBox().isDisplayed(), true, "Navigation to Comrades List Page has failed");
 
+        Assert.assertEquals(circleOfTrustPageElements.msg1_Button().isDisplayed() &&  circleOfTrustPageElements.msg2_Button().isDisplayed() && circleOfTrustPageElements.msg3_Button().isDisplayed() , true, "Help me page is not loaded");
     }
-
-    @Test(priority = 1)
-    public void canEditComradesList(){
-        log4j.Log.info("Starting edit comrades list test");
-        Assert.assertEquals(circleOfTrust.canEditComradesNumbers("12345678"), true, "Editing failed on the Edit comrade page");
-    }
-
-
 
     @AfterClass
     public static void tearDown()
