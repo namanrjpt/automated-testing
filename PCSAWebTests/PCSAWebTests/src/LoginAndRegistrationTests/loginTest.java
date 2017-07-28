@@ -21,7 +21,7 @@ import Utilities.excelUtil;
 
 import java.io.IOException;
 
-public class loginTest extends commonTest
+public class 	loginTest extends commonTest
 {
 	/*
 	 * @return Data for test cases 
