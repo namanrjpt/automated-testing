@@ -31,7 +31,7 @@ public class nonRegisteredUser extends commonTest {
             else{
                 status = false;
             }
-            Assert.assertEquals(status, true, "Security Test Failed! A Non-Registered user can access the URL" + s);
+            Assert.assertEquals(status, false, "Security Test Failed! A Non-Registered user can access the URL" + s);
         }
     }
 
